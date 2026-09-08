@@ -40,9 +40,6 @@ class Deque:
             self.size -= 1
             return item
 
-    def __len__(self):
-        return self.size
-
     def __repr__(self):
         if self.size == 0:
             print("DEQUE EMPTY")
@@ -53,6 +50,15 @@ class Deque:
                 items.append(repr(self.deque[idx]))
             return f"Deque([{', '.join(items)}])"
 
+    def print_ele(self, idx):
+        if self.size == 0:
+            print("DEQUE EMPTY")
+        elif idx >= 0 and idx <= self.size: 
+            idx = (self.head + idx) % self.capacity
+            print(self.deque[idx])
+        else:
+            print("INDEX OUT OF ORDER")
+
 
 dq = Deque(3)
 dq.append_left(10)
@@ -61,13 +67,14 @@ dq.append_right(5)
 
 print("\n")
 
-print(dq)               
-print(len(dq))          
+print(repr(dq))
+dq.print_ele(2)               
+         
 
 dq.pop_right()
 dq.pop_left()
 
 print("\n")
 
-print(dq)           
-print(len(dq)) 
+print(repr(dq))
+dq.print_ele(0)           
