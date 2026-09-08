@@ -51,13 +51,11 @@ class Deque:
             return f"Deque([{', '.join(items)}])"
 
     def print_ele(self, idx):
-        if self.size == 0:
-            print("DEQUE EMPTY")
-        elif idx >= 0 and idx <= self.size: 
-            idx = (self.head + idx) % self.capacity
-            print(self.deque[idx])
+        if idx < 0 or idx >= self.size:
+            print("INDEX OUT OF RANGE")
         else:
-            print("INDEX OUT OF ORDER")
+            index = (self.head + idx) % self.capacity
+            print(self.deque[index])
 
 
 dq = Deque(3)
