@@ -56,23 +56,3 @@ class Deque:
         else:
             index = (self.head + idx) % self.capacity
             print(self.deque[index])
-
-
-dq = Deque(3)
-dq.append_left(10)
-dq.append_left(20)
-dq.append_right(5)
-
-print("\n")
-
-print(repr(dq))
-dq.print_ele(2)               
-         
-
-dq.pop_right()
-dq.pop_left()
-
-print("\n")
-
-print(repr(dq))
-dq.print_ele(0)           
