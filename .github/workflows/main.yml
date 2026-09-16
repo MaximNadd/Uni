@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./Semester_3/Algorithims_and_Data_Structures/data-structures   # ← your code folder
+        working-directory: Semester_3/Algorithims_and_Data_Structures
 
     steps:
       - uses: actions/checkout@v4
