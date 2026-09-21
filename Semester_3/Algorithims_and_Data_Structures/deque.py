@@ -55,4 +55,4 @@ class Deque:
             print("INDEX OUT OF RANGE")
         else:
             index = (self.head + idx) % self.capacity
-            print(self.deque[index])
+            return(self.deque[index])
