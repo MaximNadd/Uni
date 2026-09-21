@@ -1,7 +1,7 @@
 # tests/test_array.py
 import pytest
 
-from array import Array
+from aarray import Array
 
 
 def test_add_to_empty():
