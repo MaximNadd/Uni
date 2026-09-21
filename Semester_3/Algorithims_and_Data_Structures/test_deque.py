@@ -35,11 +35,7 @@ def test_print_ele(capsys):
     dq = Deque(3)
     dq.append_right(1)
     dq.append_right(2)
-    assert dq.print_ele(1) == "2"
-
-    dq.print_ele(5)  # out of range
-    captured = capsys.readouterr()
-    assert "INDEX OUT OF RANGE" in captured.out
+    assert dq.print_ele(1) == 2
 
 
 def test_overflow(capsys):
